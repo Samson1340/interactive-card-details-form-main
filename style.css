@@ -1,0 +1,210 @@
+@import url('https://fonts.google.com/specimen/Space+Grotesk');
+:root{
+--active-input-border: hsl(249, 99%, 64%); 
+--active-input-border1: hsl(278, 94%, 30%);
+--input-errors: hsl(0, 100%, 66%);
+
+/* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 80%;
+    
+}
+
+body{
+    font-family: 'Space Grotesk';
+    max-width: 80vw;
+    max-height: 100vh;
+    margin: 0 auto;
+}
+main{
+    position: relative;
+
+}
+
+#back-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* z-index: 5; */
+    width: 25vw;
+    height: 100vh;
+    background-image: url('./images/bg-main-desktop.png');
+}
+
+
+
+
+/* back and front card style */
+#card-front{
+    /* background-image: url('./images/bg-card-front.png'); */
+    width: 25vw;
+    height: 30vh;
+    position: relative;
+    left: 10%;
+    top: 15rem;
+    z-index: 5;
+}
+#card-back{
+    /* background-image: url('./images/bg-card-back.png'); */
+    width: 25vw;
+    height: 30vh;
+    position: relative;
+    left: 18%;
+    top: 20rem;
+    z-index: 5;
+}
+#card-front > img, #card-back > img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+#card-front-big-cercle{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--White);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 8;
+}
+#card-front-smaill-cercle{
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    border: 1px solid var(--Light-grayish-violet);
+    position: absolute;
+    top: 3rem;
+    left: 6.5rem;
+    z-index: 8; 
+}
+#card-front p:nth-of-type(1){
+    font-size: 3em;
+    /* font-weight:bold; */
+    color:var(--Light-grayish-violet);
+    position: absolute;
+    top: 9.5rem;
+    left: 2rem;
+    letter-spacing: 0.1rem;
+}
+#card-front p:nth-of-type(2){
+    font-size: 1.5em;
+    font-weight: 500;
+    color:var(--Light-grayish-violet);
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+#card-front p:nth-of-type(3){
+    font-size: 1.5em;
+    font-weight: 500;
+    color:var(--Light-grayish-violet);
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+#card-back p{
+    font-size: 1.5em;
+    font-weight: 500;
+    color:var(--Light-grayish-violet);
+    position: absolute;
+    top: 9.3rem;
+    right: 4rem;
+    
+}
+
+/* card information input style */
+
+#back-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75vw;
+    height: 100vh;
+    
+}
+#data-input, #data-input-ok{
+    margin: auto;
+    width: 450px;
+    height: 50%;
+    position: relative;
+    top: 20rem;
+    left: 20rem;
+    /* border: 3px solid black; */
+}
+#data-input-ok{
+    display: none;
+}
+
+form{
+    width: 60%;
+    margin: 2rem auto;
+    padding: auto;
+}
+form > label{
+    font-size: 1em;
+    color: var(--active-input-border1);
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    /* padding: 0.5rem 0; */
+}
+form input[type="text"]{
+    width: 100%;
+    height: 2.3rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: var(--active-input-border1);
+    border: 1px solid var(--Dark-grayish-violet);
+}
+form input[type="text"]:active{
+    border: 1px solid var(--active-input-border1);
+    color: var(--active-input-border1);
+}  
+form input[type="text"]::placeholder{
+    color: var(--Dark-grayish-violet);
+    font-weight: normal;
+}  
+form > span{
+    font-size: 1em;
+    color: var(--input-errors) ;
+    margin: 0.5rem 0;
+    height: 1.5rem;
+}
+#card-exp-date, #card-exp-date1{
+    width: 4rem;
+}
+#cvc{
+    width: 8rem;
+}
+.error{
+border: 1px solid var(--input-errors);
+}
+
+form input[type="submit"]{
+    display: block;
+    width: 100%;
+    height: 3rem;
+}
+.attribution{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+}
