@@ -32,27 +32,30 @@
 
 <div id="back-right">
 <div id="data-input">
-  <form action="/" id="user-data-form" onsubmit="return verification()" >
-    <div class="card-info">
+  <form action="/" id="user-data-form">
+    <div class="form1">
+        <div class="formfield">
               <label for="cardholder-name">CARDHOLDER NAME</label>
               <input type="text" class="cardholder-name"name="cardholder-name" id="cardholder-name" placeholder="e.g. Jane Appleseed">
               <p class="error-massage"></p>
+          </div>
+          <div class="formfield">
               <label for="card-number">CARD NUMBER</label>
               <input type="text" class="card-number" name="card-number" id="card-number" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
               <p class="error-massage"></p>
+          </div>
       </div>
     <div class="form2">
-      <div class="exp-date">
+      <div class="formfield">
             <label for="card-exp-date">EXP. DATE (MM/YY)</label>
             <input type="text" class="card-exp-date" name="card-exp-date" id="card-exp-date" maxlength="2" placeholder="MM">
             <input type="text" class="card-exp-date" name="card-exp-date" id="card-exp-date1" maxlength="2" placeholder="YY">
             <p class="error-massage"></p>
         </div>
-      <div class="cvc">
+      <div class="formfield">
           <label for="cvc">CVC</label>
           <input type="text" name="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
-          <p class="error-massage"></p>
-          
+          <p class="error-massage"></p>    
       </div>
   </div>
   <button id="submit-btn" type="submit" >Confirm</button>

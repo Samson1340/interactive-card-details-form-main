@@ -218,9 +218,13 @@ input[type="text"]::placeholder{
 #cvc{
     width: 8rem;
 }
-.error{
+.formfield.error input{
 border: 1px solid var(--input-errors);
 }
+
+.formfield.success input{
+    border: 1px solid green;
+    }
 
 #submit-btn, #continue-btn{
     width: 100%;
