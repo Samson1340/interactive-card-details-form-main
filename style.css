@@ -97,7 +97,7 @@ main{
     /* font-weight:bold; */
     color:var(--Light-grayish-violet);
     position: absolute;
-    top: 9.5rem;
+    top: 8rem;
     left: 2rem;
     letter-spacing: 0.1rem;
 }
@@ -238,6 +238,10 @@ border: 1px solid var(--input-errors);
 
 .attribution{
     position: absolute;
-    margin: auto;
-    bottom: 0;
+    margin: 0 auto;
+    left: 50vw;
+    bottom: 1vh;
+    font-size: 11px; 
+    text-align: center;
+    color: hsl(228, 45%, 44%);
 }
